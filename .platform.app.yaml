@@ -1,0 +1,17 @@
+name: flask
+
+# The runtime the application uses.
+# Complete list of available runtimes: https://docs.platform.sh/create-apps/app-reference.html#types
+type: "python:3.10"
+
+# The size of the persistent disk of the application (in MB). Minimum value is 128.
+disk: 5000
+
+# The web key configures the web server running in front of your app.
+# More information: https://docs.platform.sh/create-apps/app-reference.html#web
+web:
+  # Commands are run once after deployment to start the application process.
+  # More information: https://docs.platform.sh/create-apps/app-reference.html#web-commands
+  commands:
+    # The command to launch your app. If it terminates, it’s restarted immediately.
+    start: lscpu
